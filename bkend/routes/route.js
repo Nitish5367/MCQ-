@@ -1,0 +1,10 @@
+let express=require('express')
+const {addqns, getqns, adduser, login, getattempts, upres}=require('../controller/cont')
+let route=new express.Router()
+route.post('/addqns',addqns)
+route.get('/getqns',getqns)
+route.post('/adduser',adduser)
+route.post('/login',login)
+route.get('/getatt/:id',getattempts)
+route.get('/upres/:sc/:id',upres)
+module.exports=route
